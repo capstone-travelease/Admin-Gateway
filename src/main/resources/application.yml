@@ -6,19 +6,16 @@ spring:
   cloud:
     gateway:
       globalcors:
-        cors-configurations:
+        corsConfigurations:
           '[/**]':
-            allowedOrigins: "*"
+            allowedOrigins: "http://35.198.227.141:3741"
             allowedMethods:
               - GET
               - POST
               - PUT
               - DELETE
-              - PATCH
-              - HEAD
-              - OPTIONS
-            allowedHeaders: '*'
-            maxAge: 30
+            allowedHeaders: "*"
+            allowCredentials: true
       routes:
         # Hotel - Admin
         - id: Get Detail Hotel

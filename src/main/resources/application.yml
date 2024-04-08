@@ -1,0 +1,55 @@
+server:
+  port: 3741
+
+spring:
+  ## Configuration Gateway
+  cloud:
+    gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - PATCH
+              - HEAD
+              - OPTIONS
+            allowedHeaders: '*'
+            maxAge: 30
+      routes:
+        # Hotel - Admin
+        - id: Get Detail Hotel
+          uri: http://10.148.0.5:30246
+          predicates:
+            - Path=/admin/api/approval-hotel/{hotelId}
+            - Method=GET
+          filters:
+            - AddRequestParameter=hotelId, {hotelId}
+
+        - id: List Hotel
+          uri: http://10.148.0.5:30246
+          predicates:
+            - Path=/admin/api/approval-hotel
+            - Method=GET
+
+        - id: Approve Hotel
+          uri: http://10.148.0.5:30246
+          predicates:
+            - Path=/admin/api/approval-hotel/approve/{hotelId}
+            - Method=PUT
+          filters:
+            - AddRequestParameter=hotelId, {hotelId}
+
+        - id: Reject Hotel
+          uri: http://10.148.0.5:30246
+          predicates:
+            - Path=/admin/api/approval-hotel/reject/{hotelId}
+            - Method=PUT
+          filters:
+            - AddRequestParameter=hotelId, {hotelId}
+
+  main:
+    web-application-type: reactive

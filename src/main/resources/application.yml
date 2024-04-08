@@ -39,13 +39,6 @@ spring:
             - Method=PUT
           filters:
             - AddRequestParameter=hotelId, {hotelId}
-          metadata:
-            cors:
-              allowedOrigins: '*'
-              allowedMethods:
-                - POST
-              allowedHeaders: '*'
-              maxAge: 30
 
         - id: Reject Hotel
           uri: http://10.148.0.5:30246

@@ -5,17 +5,6 @@ spring:
   ## Configuration Gateway
   cloud:
     gateway:
-      globalcors:
-        corsConfigurations:
-          '[/**]':
-            allowedOrigins: "http://35.198.227.141:3741"
-            allowedMethods:
-              - GET
-              - POST
-              - PUT
-              - DELETE
-            allowedHeaders: "*"
-            allowCredentials: true
       routes:
         # Hotel - Admin
         - id: Get Detail Hotel

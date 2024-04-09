@@ -8,7 +8,7 @@ spring:
       globalcors:
         cors-configurations:
           '[/**]':
-            allowedOrigins: "https://travelease-admin.netlify.app/, http://localhost:*"
+            allowedOrigins: "https://travelease-admin.netlify.app/, *"
             allowedMethods:
               - GET
               - POST
@@ -28,7 +28,7 @@ spring:
             - AddRequestParameter=hotelId, {hotelId}
 
         - id: List Hotel
-          uri: http://10.148.0.5:30246
+          uri: http://localhost:30246
           predicates:
             - Path=/admin/api/approval-hotel
             - Method=GET

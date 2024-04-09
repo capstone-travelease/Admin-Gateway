@@ -5,6 +5,18 @@ spring:
   ## Configuration Gateway
   cloud:
     gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "https://travelease-admin.netlify.app/"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+            allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept, Z-Key'
+            maxAge: 3600
+
       routes:
         # Hotel - Admin
         - id: Get Detail Hotel
@@ -25,7 +37,7 @@ spring:
           uri: http://10.148.0.5:30246
           predicates:
             - Path=/admin/api/approval-hotel/approve/{hotelId}
-            - Method=PUT
+            - Method=POST
           filters:
             - AddRequestParameter=hotelId, {hotelId}
 
@@ -33,7 +45,7 @@ spring:
           uri: http://10.148.0.5:30246
           predicates:
             - Path=/admin/api/approval-hotel/reject/{hotelId}
-            - Method=PUT
+            - Method=POST
           filters:
             - AddRequestParameter=hotelId, {hotelId}
 

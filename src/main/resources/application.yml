@@ -49,5 +49,34 @@ spring:
           filters:
             - AddRequestParameter=hotelId, {hotelId}
 
+        # Facility - Admin
+        - id: Get Facilities
+          uri: http://10.148.0.5:28645
+          predicates:
+            - Path=/admin/api/hotel-facility
+            - Method=GET
+
+        - id: Add Facilities
+          uri: http://10.148.0.5:28645
+          predicates:
+            - Path=/admin/api/hotel-facility/add
+            - Method=POST
+
+        - id: Update Facilities
+          uri: http://10.148.0.5:28645
+          predicates:
+            - Path=/admin/api/hotel-facility/update/{id}
+            - Method=POST
+          filters:
+            - AddRequestParameter=id, {id}
+
+        - id: Delete Facilities
+          uri : http://10.148.0.5:28645
+          predicates:
+            - Path=/admin/api/hotel-facility/delete/{id}
+            - Method=POST
+          filters:
+            - AddRequestParameter=id, {id}
+
   main:
     web-application-type: reactive

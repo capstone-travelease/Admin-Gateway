@@ -1,10 +1,10 @@
 server:
   port: 3741
   ssl:
-    key-store: classpath:local-https.p12
+    key-store: classpath:admin-https.p12
     key-store-password: capstonevlu
     key-store-type: PKCS12
-    key-alias: local-https
+    key-alias: admin-https
     key-password: capstonevlu
     enabled: true
 

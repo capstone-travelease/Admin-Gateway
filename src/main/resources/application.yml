@@ -40,7 +40,7 @@ spring:
             - AddRequestParameter=hotelId, {hotelId}
 
         - id: List Hotel
-          uri: http://localhost:30246
+          uri: http://10.148.0.5:30246
           predicates:
             - Path=/admin/api/approval-hotel
             - Method=GET

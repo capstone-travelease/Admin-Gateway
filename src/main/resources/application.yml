@@ -3,9 +3,15 @@ server:
   ssl:
     key-store: classpath:admin-https.p12
     key-store-password: capstonevlu
-    key-store-type: pkcs12
+    key-store-type: PKCS12
     key-alias: admin-https
     key-password: capstonevlu
+    enabled: true
+
+##trust store location
+#trust:
+#  store: classpath:admin-https.p12
+#  password: capstonevlu
 
 spring:
   ## Configuration Gateway
@@ -34,7 +40,7 @@ spring:
             - AddRequestParameter=hotelId, {hotelId}
 
         - id: List Hotel
-          uri: http://10.148.0.5:30246
+          uri: http://localhost:30246
           predicates:
             - Path=/admin/api/approval-hotel
             - Method=GET

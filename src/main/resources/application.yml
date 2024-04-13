@@ -1,5 +1,11 @@
 server:
   port: 3741
+  ssl:
+    key-store: classpath:admin-https.p12
+    key-store-password: capstonevlu
+    key-store-type: pkcs12
+    key-alias: admin-https
+    key-password: capstonevlu
 
 spring:
   ## Configuration Gateway

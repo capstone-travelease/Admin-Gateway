@@ -12,6 +12,8 @@ target/
 .settings
 .springBeans
 .sts4-cache
+/src/main/resources/local-https.p12
+/src/main/resources/certificate-local.pem
 
 ### IntelliJ IDEA ###
 .idea

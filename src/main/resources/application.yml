@@ -90,5 +90,33 @@ spring:
           filters:
             - AddRequestParameter=id, {id}
 
+        - id: Get Facilities Type
+          uri: http://10.148.0.5:28645
+          predicates:
+            - Path=/admin/api/facility-type
+            - Method=GET
+
+        - id: Add Facilities Type
+          uri: http://10.148.0.5:28645
+          predicates:
+            - Path=/admin/api/facility-type/add
+            - Method=POST
+
+        - id: Update Facilities Type
+          uri: http://10.148.0.5:28645
+          predicates:
+            - Path=/admin/api/facility-type/update/{id}
+            - Method=POST
+          filters:
+            - AddRequestParameter=id, {id}
+
+        - id: Delete Facilities Type
+          uri: http://10.148.0.5:28645
+          predicates:
+            - Path=/admin/api/facility-type/delete/{id}
+            - Method=POST
+          filters:
+            - AddRequestParameter=id, {id}
+
   main:
     web-application-type: reactive

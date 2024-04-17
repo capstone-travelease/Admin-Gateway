@@ -4,7 +4,7 @@ server:
     key-store: classpath:admin-https-two-sans.p12
     key-store-password: capstonevlu
     key-store-type: PKCS12
-    key-alias: admin-https-two-sans
+    key-alias: admin-https
     key-password: capstonevlu
     enabled: true
 

@@ -125,11 +125,25 @@ spring:
             - Path=/auth/login
             - Method=POST
 
+        # Register
         - id: Sign Up
           uri: http://10.148.0.5:2910
           predicates:
             - Path=/auth/sign
             - Method=POST
 
+        # Get Ticket
+        - id: Get Ticket
+          uri: http://10.148.0.5:16497
+          predicates:
+            - Path=/admin/api/tickets
+            - Method=GET
+
+        # Get Users
+        - id: Get Users
+          uri: http://10.148.0.5:16497
+          predicates:
+            - Path=/admin/api/users
+            - Method=GET
   main:
     web-application-type: reactive

@@ -118,5 +118,18 @@ spring:
           filters:
             - AddRequestParameter=id, {id}
 
+        # Login
+        - id: Login
+          uri: http://10.148.0.5:2910
+          predicates:
+            - Path=/auth/login
+            - Method=POST
+
+        - id: Sign Up
+          uri: http://10.148.0.5:2910
+          predicates:
+            - Path=/auth/sign
+            - Method=POST
+
   main:
     web-application-type: reactive

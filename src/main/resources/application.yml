@@ -122,14 +122,14 @@ spring:
         - id: Login
           uri: http://10.148.0.5:2910
           predicates:
-            - Path=/auth/login
+            - Path=/admin/api/auth/login
             - Method=POST
 
         # Register
         - id: Sign Up
           uri: http://10.148.0.5:2910
           predicates:
-            - Path=/auth/sign
+            - Path=/admin/api/auth/sign
             - Method=POST
 
         # Get Ticket

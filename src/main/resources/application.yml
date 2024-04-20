@@ -42,7 +42,7 @@ spring:
         - id: List Hotel
           uri: http://10.148.0.5:30246
           predicates:
-            - Path=/admin/api/approval-hotel
+            - Path=/admin/api/approval-hotels
             - Method=GET
 
         - id: Approve Hotel

@@ -20,7 +20,7 @@ spring:
       globalcors:
         cors-configurations:
           '[/**]':
-            allowedOrigins: "https://travelease-admin.netlify.app/, *"
+            allowedOrigins: "https://travelease-admin.netlify.app/, http://localhost:5173"
             allowedMethods:
               - GET
               - POST

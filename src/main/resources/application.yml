@@ -27,7 +27,7 @@ spring:
               - PUT
               - DELETE
               - OPTIONS
-            allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept, Z-Key'
+            allowedHeaders: 'Origin, X-Requested-With, Content-Type, Authorization, Accept, Z-Key'
             maxAge: 3600
 
       routes:

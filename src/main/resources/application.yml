@@ -29,6 +29,7 @@ spring:
               - OPTIONS
             allowedHeaders: 'Origin, X-Requested-With, Content-Type, Authorization, Accept, Z-Key'
             maxAge: 3600
+            allowCredentials: true
 
       routes:
         # Hotel - Admin

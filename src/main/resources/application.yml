@@ -24,10 +24,8 @@ spring:
             allowedMethods:
               - GET
               - POST
-              - PUT
-              - DELETE
               - OPTIONS
-            allowedHeaders: 'Origin, X-Requested-With, Content-Type, Authorization, Accept, Z-Key'
+            allowedHeaders: 'Content-Type, Authorization'
             maxAge: 3600
             allowCredentials: true
 

@@ -20,14 +20,12 @@ spring:
       globalcors:
         cors-configurations:
           '[/**]':
-            allowedOrigins: "https://travelease-admin.netlify.app/"
-            allowedMethods:
-              - GET
-              - POST
-              - OPTIONS
-            allowedHeaders: 'Content-Type, Authorization'
+#            allowedOrigins: "https://travelease-admin.netlify.app/"
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: '*'
             maxAge: 3600
-            allowCredentials: true
+#            allowCredentials: true
 
       routes:
         # Hotel - Admin

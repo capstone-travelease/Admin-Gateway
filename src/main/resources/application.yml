@@ -21,7 +21,7 @@ spring:
         add-to-simple-url-handler-mapping: true
         corsConfigurations:
           '[/**]':
-            allowedOrigins: "https://travelease-admin.netlify.app/"
+            allowedOrigins: "https://travelease-admin.netlify.app/, *"
             allowedHeaders:
               - "Origin"
               - "Content-Type"

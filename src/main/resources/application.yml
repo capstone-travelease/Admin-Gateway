@@ -35,7 +35,7 @@ spring:
       routes:
         # Hotel - Admin
         - id: Get Detail Hotel
-          uri: http://10.148.0.5:30246
+          uri: http://10.148.0.4:30246
           predicates:
             - Path=/admin/api/approval-hotel/{hotelId}
             - Method=GET
@@ -43,13 +43,13 @@ spring:
             - AddRequestParameter=hotelId, {hotelId}
 
         - id: List Hotel
-          uri: http://10.148.0.5:30246
+          uri: http://10.148.0.4:30246
           predicates:
             - Path=/admin/api/approval-hotels
             - Method=GET
 
         - id: Approve Hotel
-          uri: http://10.148.0.5:30246
+          uri: http://10.148.0.4:30246
           predicates:
             - Path=/admin/api/approval-hotel/approve/{hotelId}
             - Method=POST
@@ -57,7 +57,7 @@ spring:
             - AddRequestParameter=hotelId, {hotelId}
 
         - id: Reject Hotel
-          uri: http://10.148.0.5:30246
+          uri: http://10.148.0.4:30246
           predicates:
             - Path=/admin/api/approval-hotel/reject/{hotelId}
             - Method=POST
@@ -66,19 +66,19 @@ spring:
 
         # Facility - Admin
         - id: Get Facilities
-          uri: http://10.148.0.5:28645
+          uri: http://10.148.0.4:28645
           predicates:
             - Path=/admin/api/facilities
             - Method=GET
 
         - id: Add Facilities
-          uri: http://10.148.0.5:28645
+          uri: http://10.148.0.4:28645
           predicates:
             - Path=/admin/api/facility/add
             - Method=POST
 
         - id: Update Facilities
-          uri: http://10.148.0.5:28645
+          uri: http://10.148.0.4:28645
           predicates:
             - Path=/admin/api/facility/update/{id}
             - Method=POST
@@ -86,7 +86,7 @@ spring:
             - AddRequestParameter=id, {id}
 
         - id: Delete Facilities
-          uri : http://10.148.0.5:28645
+          uri : http://10.148.0.4:28645
           predicates:
             - Path=/admin/api/facility/delete/{id}
             - Method=POST
@@ -94,19 +94,19 @@ spring:
             - AddRequestParameter=id, {id}
 
         - id: Get Facilities Type
-          uri: http://10.148.0.5:28645
+          uri: http://10.148.0.4:28645
           predicates:
             - Path=/admin/api/facility-type
             - Method=GET
 
         - id: Add Facilities Type
-          uri: http://10.148.0.5:28645
+          uri: http://10.148.0.4:28645
           predicates:
             - Path=/admin/api/facility-type/add
             - Method=POST
 
         - id: Update Facilities Type
-          uri: http://10.148.0.5:28645
+          uri: http://10.148.0.4:28645
           predicates:
             - Path=/admin/api/facility-type/update/{id}
             - Method=POST
@@ -114,7 +114,7 @@ spring:
             - AddRequestParameter=id, {id}
 
         - id: Delete Facilities Type
-          uri: http://10.148.0.5:28645
+          uri: http://10.148.0.4:28645
           predicates:
             - Path=/admin/api/facility-type/delete/{id}
             - Method=POST
@@ -123,28 +123,28 @@ spring:
 
         # Login
         - id: Login
-          uri: http://10.148.0.5:2910
+          uri: http://10.148.0.4:2910
           predicates:
             - Path=/admin/api/auth/login
             - Method=POST
 
         # Register
         - id: Sign Up
-          uri: http://10.148.0.5:2910
+          uri: http://10.148.0.4:2910
           predicates:
             - Path=/admin/api/auth/sign
             - Method=POST
 
         # Get Ticket
         - id: Get Ticket
-          uri: http://10.148.0.5:16497
+          uri: http://10.148.0.4:16497
           predicates:
             - Path=/admin/api/tickets
             - Method=GET
 
         # Get Users
         - id: Get Users
-          uri: http://10.148.0.5:16497
+          uri: http://10.148.0.4:16497
           predicates:
             - Path=/admin/api/users
             - Method=GET

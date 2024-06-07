@@ -49,7 +49,7 @@ spring:
             - Method=GET
 
         - id: List Approved Hotel
-          uri: http://10.148.0.4:30246
+          uri: http://10.148.0.9:30246
           predicates:
             - Path=/admin/api/approve-hotels
             - Method=GET

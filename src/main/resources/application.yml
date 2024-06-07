@@ -42,10 +42,16 @@ spring:
           filters:
             - AddRequestParameter=hotelId, {hotelId}
 
-        - id: List Hotel
+        - id: List Await Hotel
           uri: http://10.148.0.4:30246
           predicates:
             - Path=/admin/api/approval-hotels
+            - Method=GET
+
+        - id: List Approved Hotel
+          uri: http://10.148.0.4:30246
+          predicates:
+            - Path=/admin/api/approve-hotels
             - Method=GET
 
         - id: Approve Hotel
